@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
-
+using System.ComponentModel.DataAnnotations;
 
 
 namespace Books_MVC.Models
@@ -11,7 +11,9 @@ namespace Books_MVC.Models
     public class books
     {
         public int Id { get; set; }
+        [Required]
         public string name { get; set; }
+        [Required]
         public string author { get; set; }
         public string year { get; set; }
         public DateTime date { get; set; }

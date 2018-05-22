@@ -32,13 +32,19 @@ namespace Books_MVC.Controllers
         [HttpPost]
         public ActionResult Create(books book)
         {
+
             book.date = DateTime.Now;
 
-            db.Books.Add(book);
-            db.SaveChanges();
+            if (ModelState.IsValid)
+            {
+                db.Books.Add(book);
+                db.SaveChanges();
 
+                return RedirectToAction("Index");
+            }
 
-            return RedirectToAction("Index");
+            return View(book);
+
         }
 
         public ActionResult IndexModel()
