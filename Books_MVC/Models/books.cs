@@ -24,5 +24,6 @@ namespace Books_MVC.Models
         {
         }
         public DbSet<books> Books { get; set; }
+        public DbSet<UserComments> Usercomments { get; set; }
     }
 }

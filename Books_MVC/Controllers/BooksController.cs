@@ -13,6 +13,7 @@ namespace Books_MVC.Controllers
         // GET: /Books/
 
         booksDbContext db = new booksDbContext("DbTesting");
+        
 
         public ActionResult Index()
         {
@@ -53,6 +54,23 @@ namespace Books_MVC.Controllers
             ViewBag.description = "View by Strongly Typed Model";
 
             return View(MyBooks);
+        }
+
+
+        public ActionResult CommentSummary()
+        {
+
+            var comm = from i in db.Usercomments
+                       group i by i.UserName into groupedByName
+                       orderby groupedByName.Count() descending
+                       select new CommentSummary
+                       {
+                           NumberOfComments = groupedByName.Count(),
+                           UserName = groupedByName.Key
+
+                       };
+            
+            return View(comm);
         }
     }
 }

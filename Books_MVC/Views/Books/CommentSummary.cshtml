@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "CommentSummary";
+}
+
+@using Books_MVC.Models
+@model IEnumerable<CommentSummary>
+
+<h2>CommentSummary</h2>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Count</th>
+    </tr>
+
+
+
+@foreach (CommentSummary c in Model)
+{
+    <tr>
+        <td>@c.UserName</td>
+        <td>@c.NumberOfComments</td>
+    </tr>
+}
+
+    </table>
+

@@ -115,6 +115,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\books.cs" />
+    <Compile Include="Models\CommentSummary.cs" />
+    <Compile Include="Models\UserComments.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -145,6 +147,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Books\IndexModel.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Books\CommentSummary.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
