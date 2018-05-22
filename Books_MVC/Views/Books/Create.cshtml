@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using(Html.BeginForm("Create", "Books", FormMethod.Post))
+{
+    <div>
+        <div>
+            <span>Name</span>
+            <input type="text" name="name" />
+        </div>
+        <div>
+            <span>Author</span>
+            <input type="text" name="author" />
+        </div>
+        <div>
+            <span>Year</span>
+            <input type="text" name="year" />
+        </div>
+
+        <input type="submit" value="Accept" />
+    </div>
+
+}

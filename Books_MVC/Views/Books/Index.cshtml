@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+<div>
+
+    @Html.ActionLink("Create", "Create", "Books");
+
+    @foreach (var b in ViewBag.books)
+    {
+        <div>
+            <span>
+                @b.name
+            </span>
+            <span>
+               @b.author
+            </span>
+
+        </div>
+
+    }
+</div>
