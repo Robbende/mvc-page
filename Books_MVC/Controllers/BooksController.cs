@@ -39,5 +39,20 @@ namespace Books_MVC.Controllers
 
             return RedirectToAction("Index");
         }
+
+        public ActionResult IndexModel()
+        {
+            /*
+                We send to the view the model, so in the view we define the model to 
+                make use of the intellisense and the use of dataannotations
+             
+             */
+
+            List<books> MyBooks = db.Books.Where(i => i.Id > 0).OrderByDescending(i => i.Id).ToList();
+
+            ViewBag.description = "View by Strongly Typed Model";
+
+            return View(MyBooks);
+        }
     }
 }

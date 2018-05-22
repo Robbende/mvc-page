@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "IndexModel";
+}
+
+@using Books_MVC.Models
+@model List<books>
+
+
+<h2>@ViewBag.description</h2>
+
+
+<div>
+
+    @Html.ActionLink("Create", "Create", "Books");
+
+    @foreach (books b in Model)
+    {
+        <div>
+            <span>
+                @b.name
+            </span>
+            <span>
+               @b.author
+            </span>
+
+        </div>
+
+    }
+</div>
