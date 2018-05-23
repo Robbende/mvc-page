@@ -26,7 +26,8 @@ namespace Books_MVC.Controllers
 
         public ActionResult Create()
         {
-            return View();
+            // return View();   /* return by Create View */
+            return View("CreateStronglyModel");
         }
 
         [HttpPost]
