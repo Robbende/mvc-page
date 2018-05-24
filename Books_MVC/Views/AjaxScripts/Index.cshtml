@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<script src="~/Scripts/jquery-3.3.1.js" type="text/javascript"></script>
+<script src="~/Scripts/js/load-partial-view.js" type="text/javascript"></script>
+
+<h2>Index</h2>
+
+
+@Html.ActionLink("Display Partial View", "PrivacyPolicy", null, new { id = "privacyLinkId" });
+
+<div id="privacy"></div>
