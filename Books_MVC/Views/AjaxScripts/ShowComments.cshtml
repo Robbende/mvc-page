@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "ShowComments";
+}
+
+@model IEnumerable<string>
+
+<script src="~/Scripts/jquery-3.3.1.js" type="text/javascript"></script>
+<script src="~/Scripts/js/add-comments.js" type="text/javascript"></script>
+
+<h2>ShowComments</h2>
+
+@if (ViewBag.Comment != "")
+{
+    <h3>@ViewBag.Comment</h3>
+}
+
+
+<ul id="comments">
+    @foreach(var c in Model)
+    {
+        <li>@c</li>
+    }
+</ul>
+
+@using (Html.BeginForm("AddComment", "AjaxScripts", FormMethod.Post, new { id = "commentForm" }))
+{
+    @Html.TextArea("comment", new { rows = 5, cols = 50, id = "txtCommentId" })
+    <br />
+    <input type="submit" value="Add Comment" />
+}
