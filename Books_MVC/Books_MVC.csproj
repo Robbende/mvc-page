@@ -119,6 +119,7 @@
     <Compile Include="Models\books.cs" />
     <Compile Include="Models\CommentSummary.cs" />
     <Compile Include="Models\CustomerSummary.cs" />
+    <Compile Include="Models\speaker.cs" />
     <Compile Include="Models\UserComments.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -126,6 +127,11 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\css\speakers.css" />
+    <Content Include="Content\img\user1.jpg" />
+    <Content Include="Content\img\user2.jpg" />
+    <Content Include="Content\img\user3.jpg" />
+    <Content Include="Content\img\user4.jpg" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -141,6 +147,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\js\add-comments.js" />
     <Content Include="Scripts\js\load-partial-view.js" />
+    <Content Include="Scripts\js\speaker-details.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -157,6 +164,7 @@
     <Content Include="Views\AjaxScripts\PrivacyPolicy.cshtml" />
     <Content Include="Views\AjaxScripts\ShowComments.cshtml" />
     <Content Include="Views\AjaxScripts\AddComment.cshtml" />
+    <Content Include="Views\AjaxScripts\ShowSpeakers.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

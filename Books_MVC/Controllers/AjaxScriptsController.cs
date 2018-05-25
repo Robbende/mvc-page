@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Books_MVC.Models;
 
 namespace Books_MVC.Controllers
 {
@@ -12,6 +13,14 @@ namespace Books_MVC.Controllers
         // GET: /AjaxScripts/
 
         public static List<string> _comments = new List<string>() { "comment1", "comment2", "comment3", "comment4" };
+
+        public static List<Speaker> _speakerRepo = new List<Speaker>()
+        {
+            new Speaker(){Id=1, FirstName="Alejandro", LastName="Deambrossi", Bio="bio", PictureUrl="/Content/img/user1.jpg"},
+            new Speaker(){Id=2, FirstName="Ruben", LastName="Deambrossi", Bio="bio", PictureUrl="/Content/img/user2.jpg"},
+            new Speaker(){Id=3, FirstName="Juan", LastName="Deambrossi", Bio="bio", PictureUrl="/Content/img/user3.jpg"},
+            new Speaker(){Id=4, FirstName="Carlos", LastName="Deambrossi", Bio="bio", PictureUrl="/Content/img/user4.jpg"},
+        };
 
         public ActionResult Index()
         {
@@ -52,5 +61,23 @@ namespace Books_MVC.Controllers
 
             return RedirectToAction("ShowComments");
         }
+
+
+        public ActionResult ShowSpeakers()
+        {
+            var speakers = from s in _speakerRepo select s;
+
+            return View(speakers);
+        }
+
+        [HttpPost]
+        public ActionResult SpeakerDetail(int spid)
+        {
+            
+            var speaker_detail = _speakerRepo.Where(i=>i.Id == spid).FirstOrDefault();
+
+            return Json(speaker_detail, JsonRequestBehavior.AllowGet);
+        }
     }
+
 }
