@@ -78,6 +78,12 @@ namespace Books_MVC.Controllers
 
             return Json(speaker_detail, JsonRequestBehavior.AllowGet);
         }
+
+        public ActionResult SpeakerPartial()
+        {
+            /* display speckers with partial view */
+            return View(_speakerRepo);
+        }
     }
 
 }

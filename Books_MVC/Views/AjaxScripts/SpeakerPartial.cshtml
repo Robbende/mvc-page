@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "SpeakerPartial";
+}
+
+@using Books_MVC.Models;
+@model IEnumerable<Speaker>
+
+<h2>SpeakerPartial</h2>
+
+
+<table>
+    <tr>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Bio</th>
+    </tr>
+
+    @foreach (var sp in Model)
+    {
+        @Html.Partial("_PartialSpeakers", sp)
+    }
+
+</table>
