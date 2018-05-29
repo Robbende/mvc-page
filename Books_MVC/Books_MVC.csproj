@@ -113,12 +113,14 @@
     <Compile Include="Controllers\AjaxScriptsController.cs" />
     <Compile Include="Controllers\BooksController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\PetController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\books.cs" />
     <Compile Include="Models\CommentSummary.cs" />
     <Compile Include="Models\CustomerSummary.cs" />
+    <Compile Include="Models\Pet.cs" />
     <Compile Include="Models\speaker.cs" />
     <Compile Include="Models\UserComments.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -219,6 +221,8 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Views\AjaxScripts\SpeakerPartial.cshtml" />
     <Content Include="Views\AjaxScripts\_PartialSpeakers.cshtml" />
+    <Content Include="Views\Pet\Index.cshtml" />
+    <Content Include="Views\Pet\NotFound.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
