@@ -137,6 +137,9 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\site.css" />
     <Content Include="Content\css\speakers.css" />
+    <Content Include="Content\img\boby.jpg" />
+    <Content Include="Content\img\colitas.jpg" />
+    <Content Include="Content\img\firulais.jpg" />
     <Content Include="Content\img\user1.jpg" />
     <Content Include="Content\img\user2.jpg" />
     <Content Include="Content\img\user3.jpg" />
@@ -221,8 +224,9 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Views\AjaxScripts\SpeakerPartial.cshtml" />
     <Content Include="Views\AjaxScripts\_PartialSpeakers.cshtml" />
-    <Content Include="Views\Pet\Index.cshtml" />
+    <Content Include="Views\Pet\Details.cshtml" />
     <Content Include="Views\Pet\NotFound.cshtml" />
+    <Content Include="Views\Pet\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

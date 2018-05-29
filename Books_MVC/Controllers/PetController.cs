@@ -21,6 +21,11 @@ namespace Books_MVC.Controllers
 
         public ActionResult Index()
         {
+            return View(Pets);
+        }
+
+        public ActionResult Details()
+        {
             var pet_id = (string)RouteData.Values["id"];
 
             var pet = Pets.Where(i => i.id == int.Parse(pet_id)).FirstOrDefault();
@@ -40,6 +45,18 @@ namespace Books_MVC.Controllers
             return View();
         }
 
+
+        public FileResult DownloadPetPicture()
+        {
+            var pet_id = (string)RouteData.Values["id"];
+            var pet = Pets.Where(i => i.id == int.Parse(pet_id)).FirstOrDefault();
+
+            var picture = "/Content/img/" + pet.name + ".jpg";
+            var contentType = "image/jpg";
+            var fileName = pet.name + ".jpg";
+
+            return File(picture, contentType, fileName);
+        }
 
 
     }
