@@ -32,7 +32,9 @@ namespace Books_MVC.Controllers
 
             if (pet == null)
             {
-                return RedirectToAction("NotFound", new { message = "Pet with the Id: " + pet_id + " was not found" });
+                // return RedirectToAction("NotFound", new { message = "Pet with the Id: " + pet_id + " was not found" });
+                
+                return PetNotFound(); // return an HTTP 404 not found, recomended for SEO optimization to browser reindex
             }
 
             return View(pet);
@@ -58,6 +60,11 @@ namespace Books_MVC.Controllers
             return File(picture, contentType, fileName);
         }
 
+
+        public ActionResult PetNotFound()
+        {
+            return HttpNotFound("Pet Not Found");
+        }
 
     }
 }
